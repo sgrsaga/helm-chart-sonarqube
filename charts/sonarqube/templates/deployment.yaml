@@ -108,7 +108,7 @@ spec:
       {{- end }}
       {{- if .Values.plugins.install }}
         - name: install-plugins
-          image: {{ default "curlimages/curl:7.76.1" .Values.plugins.image }}
+          image: {{ default "ibmcom/curl:4.2.0-build.2" .Values.plugins.image }}
           imagePullPolicy: {{ .Values.image.pullPolicy  }}
           command: ["sh",
             "-e",
